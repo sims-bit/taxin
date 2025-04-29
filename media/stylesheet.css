@@ -1,15 +1,23 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; 
+  }
+
 body{
     height: 100vh;
     width: 100vw; 
     background-image: linear-gradient(#B8E1FF, #94FBAB);
     background-repeat: no-repeat;
     font-family: sans-serif;
-    color: ;
 }
 
 /*Nav bar*/
 .navbar{
-    width: 100vw;
+    width: 100%;
+
 }
 
 h1{
@@ -19,9 +27,14 @@ h1{
 /* Calulator modal */
 .card{
     background-color: #b8e1ff69;
-   
 }
 
+input{
+    margin-bottom: 10px;
+    background-color: #b8e1ff69;
+    border: 2px solid #BCB6FF;
+    border-radius: 15px;;
+}
 
 #calculate-button{
     background-color:  #BCB6FF;
@@ -32,6 +45,17 @@ footer{
     width: 100vw;
     position: fixed;
     bottom: 0;
+    left: 0;
     background-color: #bcb6ff67;
+    text-align: center;
 }
 
+footer img{
+    height: 20px;
+    width: 20px;
+    padding: 2px 2px;
+}
+
+html{
+    background-color: red;
+}
