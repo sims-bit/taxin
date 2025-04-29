@@ -4,6 +4,7 @@ def income_tax(net):
     basic_rate_threshold = 50270
     higher_rate_threshold = 125140
     highest_rate = 125141
+    band_3 = 0
     
     # No tax if below personal allowance
     if net <= personal_allowance:
@@ -27,7 +28,7 @@ def income_tax(net):
         else:
             band_2 = (higher_rate_threshold - basic_rate_threshold) * 0.4
             # Band 3 (highest rate): 45% income above £125140
-            band_3 = (higher_rate_threshold - higher_rate_threshold) * 0.45
+            band_3 = (12570 + higher_rate_threshold - higher_rate_threshold) * 0.45
     
     # Calculate total tax and take-home pay
     total_tax = band_1 + band_2 + band_3
@@ -44,10 +45,10 @@ def income_tax(net):
 
 
 
-    net = 60000
-    taxable_income = net - 12571  
-    print("Tax time")
-    income_tax(net)
+net = 160000
+taxable_income = net - 12571  
+print("Tax time")
+income_tax(net)
 
 
 
